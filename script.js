@@ -30,7 +30,7 @@ console.log(temp)
 
 // javascript Data types: Primitive and Non-Primitive data types 
 
-let studentNames = ["Dolapo", "Ridwan", "Mueez", "Feranmi"]; // Non-primitive
+let studentNames = ["Dolapo", "Ridwan", "Mueez", "Feranmi"]; // primitive
 let primitive = 10; // primitive
 
 let anotherPrimitive = primitive;
@@ -43,13 +43,17 @@ console.log({primitive, anotherPrimitive})
 
 let newStudentNames = studentNames;
 
-// studentNames = ["Soliu", "Abdullahi"];
+studentNames = ["Soliu", "Abdullahi"];
 
-// console.log({studentNames, newStudentNames})
+ console.log({studentNames, newStudentNames})
 
 studentNames[0] = "Dollypee"
 
 console.log({studentNames, newStudentNames})
+
+newStudentNames[2] = "Habeeb"; 
+console.log({studentNames, newStudentNames})
+console.log(typeof "habeeb") // data type checking
 
 
 // Javascript operators
@@ -58,23 +62,29 @@ console.log({studentNames, newStudentNames})
 
 const num1 = 10;
 
-const name1 = 0;
+const name1 = "10";
 
-const trueValue = num1 && name1 ? "It is truthy value": "It is false"
-// const trueValue = num1 || name1 ? "It is truthy value": "It is false"
+// const trueValue = num1 && name1 ? "It is truthy value": "It is false"
+const trueValue = num1 || name1 ? "It is truthy value": "It is false"
 
-// console.log(`${trueValue}`)
+console.log(`${trueValue}`)
 
 
 // comparison operator
 
 let num2 = 10;
-num2--
 let num3 = "10";
 
-const result = num2 == num3 ? "yes": "no"
+const result = num2 !== num3 ? "yes": "no"
 
-console.log(--num2);
+console.log(num2 !== num3);
 
+// let a = 5;
+// let b = 3;
+
+// conts result;
+
+// result = a + b;
+// console.log(result)
 
 
