@@ -8,6 +8,8 @@ if ("condition"){
     // code to execute if condition is met
 }
 
+
+
 let age = 30;
 
 if (age === 25) {
@@ -177,6 +179,27 @@ switch (dayNumber){
     
             default:
                     console.log("Unknown role, please contact for support")
+    }
+
+    let color="green"
+
+    switch (color) {
+        case "red":
+            console.log("Stop");
+            break;
+
+        case "yellow":
+           console.log("Caution");
+           break;
+        
+        case "green":
+            console.log("Go");
+            break;
+        
+        default:
+            console.log("invalid color")
+            
+     
     }
 
 
