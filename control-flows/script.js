@@ -75,7 +75,7 @@ threashold > 40 ? console.log("Marry") : console.log("You are still a minor")
 
 const number = 9;
 
-const result = number % 2 === 0 ? "even" : "odd";
+const result = number % 3 === 0 ? "even" : "odd";
 
 console.log(result)
 
@@ -207,6 +207,10 @@ switch (dayNumber){
 
     // For Loop= Runs a block of code for specific number of time (Syntax)
 
+    // for (initialization; condition; update) {
+    //     code execute
+    // }
+
     for(let i = 0; i < 10; i++) {
         console.log("iteration", i)
     }
@@ -223,4 +227,94 @@ switch (dayNumber){
         console.log(i);
     }
 
-    
+    for (let i = 1; i <= 10; i +=2 ) {
+        console.log("Odd number:", i,);
+    }
+
+    for (let i = 1; i <=5; i ++) {
+    if(i===3){
+        continue
+    }
+        console.log(i);
+    }
+
+    let fruit = ["Mango", "Apple", "Orange", "Banana"];
+
+    // for(let i = 1; i <= 3; i++){
+    //     if(fruit[i] === "Mango"){
+    //         continue
+    //     }
+    //     console.log(fruit[i])
+    // }
+     for(let i = 1; i < fruit.length; i++) {
+        console.log(fruit[i])
+     }
+
+     let name1 ="Dolapo"
+
+     for(let i = 0; i < name1.length; i++){
+        console.log(name1[i])
+     }
+
+     // for...in loop 
+
+     //Example
+
+     let userName = {name:"Dolapo", age:13, city:"osogbo"}
+
+     for(key in userName) {
+        // console.log(userName[key])
+        console.log(key + ":", userName[key])
+     }
+
+     let myDetails = { school: "Unilorin", faculty: "Agriculture"}
+
+     for(key in myDetails) {
+        console.log(myDetails[key])
+     }
+
+     let colors = ["yellow", "Red", "Blue", "Pink"]
+
+     for(element of colors) {
+        console.log( "color:" + element);
+     }
+        
+     
+// while  loop
+
+//while (condition) {
+    //code to execute 
+//}
+
+// let k = 1;
+
+// while (k > 7) {
+//     console.log(k); 
+// }
+
+let y = 0;
+
+while (y < 10){
+    y++;
+    if(y===6){
+        break;
+    }
+    console.log(y);
+}
+
+let col = ["yellow", "Red", "Blue", "Pink"]
+let j = 0;
+
+while (j < col.length){
+    console.log(col[j]); j++;
+}
+
+//forEach
+
+const students = ['Dolapo', 'Habeeb', 'jide', 'Tola'];
+students.forEach((student, i) => {
+    console.log(`index ${i}: ${student}`)
+})
+
+
+

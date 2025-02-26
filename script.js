@@ -79,12 +79,56 @@ const result = num2 !== num3 ? "yes": "no"
 
 console.log(num2 !== num3);
 
-// let a = 5;
-// let b = 3;
+//Equality Operator
 
-// conts result;
+//Strict (===)
 
-// result = a + b;
-// console.log(result)
+// console.log(5 == "5");
+console.log(5 === "5");
+console.log(5 === 5);
+console.log(true === 1);
+// console.log([] === 0)
+// console.log(true == 1);
+console.log(null === undefined);
+console.log(`[1, 2, 3]` === `[1, 2, 3]`);
+// console.log([1, 2, 3] === [1, 2, 3]);
+// console.log({} === {});
 
+let obj1 = {name: "lateefa"};
+console.log(typeof obj1)
+let obj2 = {name: "lateefa"}
+
+console.log(obj1 === obj2 )
+// console.log([obj1] === [obj2]) 
+
+let array1 = [1, 2, 3]
+console.log(typeof array1)
+let array2 = [1, 2, 3]
+
+console.log(array1 === array2)
+
+//loose (==)
+
+console.log(5 == "5");
+console.log(5 == 5);
+console.log(true == 1);
+console.log(null == undefined);
+console.log(`[1, 2, 3]` == `[1, 2, 3]`);
+
+let obj3 = {name: "lateefa"};
+let obj4 = {name: "lateefa"};
+
+console.log(obj3 == obj4 );
+
+let array3 = [1, 2, 3];
+let array4 = [1, 2, 3];
+
+console.log(array3 == array4);
+
+console.log([] == 0);
+console.log([1] == 1);
+console.log(null == false);
+console.log("\t\n" == 0);
+console.log("Ridox" == "Dollypee");
+console.log([1, 2] == "1,2");
 
