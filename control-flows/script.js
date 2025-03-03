@@ -30,7 +30,7 @@ if (!isLoggedIn){
 }
 
 let balance=500;
-let withdrawalAmount=10000;
+let withdrawalAmount=1000;
 
 if (withdrawalAmount > balance) {
     console.log("Insufficient fund")
@@ -44,7 +44,9 @@ let user=18;
 
 if (user < 18) {
     console.log("you are ineligible to vote")
-} else {
+} else if(user > 18){
+    console.log("you can vote")
+}else {
     console.log("congratulations you have voted")
 }
 
@@ -81,7 +83,7 @@ console.log(result)
 
 let temperature = 60;
 
-const entry = temperature < 12 ? "It is a cool day" : "It is a hot 🥵 day!";
+let entry = temperature < 12 ? "It is a cool day" : "It is a hot 🥵 day!";
 
 console.log(entry);
 
@@ -203,7 +205,7 @@ switch (dayNumber){
     }
 
 
-    //Loops are used to execute a block of code multiole times.
+    //Loops are used to execute a block of code multiple times.
 
     // For Loop= Runs a block of code for specific number of time (Syntax)
 
@@ -227,13 +229,17 @@ switch (dayNumber){
         console.log(i);
     }
 
-    for (let i = 1; i <= 10; i +=2 ) {
+    for (let i = 1; i <= 10; i+=2 ) {
         console.log("Odd number:", i,);
     }
 
-    for (let i = 1; i <=5; i ++) {
+    for (d = 5; d <= 50; d+=5){
+        console.log(d)
+    }
+
+    for (let i = 1; i <=5; i++) {
     if(i===3){
-        continue
+        continue;
     }
         console.log(i);
     }
@@ -246,7 +252,7 @@ switch (dayNumber){
     //     }
     //     console.log(fruit[i])
     // }
-     for(let i = 1; i < fruit.length; i++) {
+     for(let i =0; i < fruit.length; i++) {
         console.log(fruit[i])
      }
 
@@ -316,5 +322,38 @@ students.forEach((student, i) => {
     console.log(`index ${i}: ${student}`)
 })
 
+// Operation Precedence
+
+console.log((2*6)+3-3*7/3*5%2)
+
+console.log("dolly\tp")
+
+//Nested Ternary
+
+let ade = 25;
+
+let  results = (ade >= 18) ? (ade < 21 ? "young adult" : "adult") : "Underage";
+console.log(results) 
+
+let name = null;
+
+let greeting = name ? ` hell0 ${name}` : "hello, Quest";
+console.log(greeting)
 
 
+let purchaseAmounts = 0;
+let discounts;
+
+if (purchaseAmounts >= 300) {
+    discount=10;
+}else if (purchaseAmounts>=200) {
+    discount=5;
+}else if (purchaseAmounts >=100){
+    discount=2;
+}else {
+    discount=0;
+}
+
+console.log(`your discount is ${discount}%`)
+// console.log("You discount is" + discount + "%")
+ 

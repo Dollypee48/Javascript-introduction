@@ -132,3 +132,4 @@ console.log("\t\n" == 0);
 console.log("Ridox" == "Dollypee");
 console.log([1, 2] == "1,2");
 
+console.log("das" + "asn")
