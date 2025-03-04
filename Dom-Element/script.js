@@ -2,43 +2,43 @@
 
 // // Access class
 
-// const body = document.getElementsByClassName("body")
+const body = document.getElementsByClassName("body")
 
-// console.log(body)
+console.log(body)
 
 // // Id
 
-// const header = document.getElementById("header")
+const header = document.getElementById("header")
 
-// // console.log(header.textContent)
-// // console.log(header.tagName)
-// console.log(header)
+console.log(header.textContent)
+// console.log(header.tagName)
+console.log(header)
 
 // //tagName
 
-// const hello = document.getElementsByTagName("h1")
+const hello = document.getElementsByTagName("h1")
 
-// console.log(hello)
+console.log(hello)
 
-// //QuerySelector
+//QuerySelector
 
-// const classElements = document.querySelector(".body")
+const classElements = document.querySelector(".body")
 
-// console.log(classElements)
+console.log(classElements)
 
-// // const classes = document.querySelector("#header")
+const classes = document.querySelector("#header")
 
-// // console.log(classes)
+console.log(classes.textContent)
 
 // //QuerySelectorAll
 
-// // const all = document.querySelectorAll("h1")
+const all = document.querySelectorAll("h1")
 
-// // console.log(all)
+console.log(all)
 
-// // const allAll = document.querySelectorAll(".body")
+const allAll = document.querySelectorAll(".body")
 
-// // console.log(allAll)
+console.log(allAll)
 
 
 
@@ -53,8 +53,8 @@
 
 //TEXTCONTENT
 
-const header = document.getElementById("header")
-header.textContent = "Hello Universe!"
+const heade = document.getElementById("header")
+heade.textContent = "Hello Universe!"
 
 const yeah = document.querySelector("p")
 
@@ -75,7 +75,7 @@ container.innerHTML = ` <h1> I do read </h1>
 <p>and play football</p>`
 
 
-// Styling
+// // Styling
 
 container.style.backgroundColor = "black"
 container.style.color = "white"
@@ -94,9 +94,9 @@ const bodyElements = document.getElementsByClassName("body")
 console.log(bodyElements)
 
 
-// Adding Event Listener
+// // Adding Event Listener
 
-//click event 
+// //click event 
 
 document.querySelector("button").addEventListener("click", function(){
 
@@ -111,7 +111,7 @@ document.querySelector("button").addEventListener("click", function(){
 //  }
 
 
-// Mouse Event  
+// // Mouse Event  
 
 
 document.getElementById("box").addEventListener("mouseover", function(){
@@ -119,7 +119,7 @@ document.getElementById("box").addEventListener("mouseover", function(){
 })
 
 document.getElementById("box").addEventListener("mouseout", function(){
-    document.getElementById("box").style.backgroundColor = "green"
+    document.getElementById("box").style.backgroundColor = "black"
 })
 
 document.getElementById("textInput").addEventListener("keyup", function(event){
@@ -127,15 +127,24 @@ document.getElementById("textInput").addEventListener("keyup", function(event){
 })
 
 
-function greet(name){
-    alert("Hello, " + name + "!")
-}
+// function greet(name){
+//     alert("Hello, " + name + "!")
+// }
 
-document.getElementById("greetBtn").addEventListener("click", () => greet("Dolapo"))
+// document.getElementById("greetBtn").addEventListener("click", () => greet("Dolapo"))
 
 
 
-const newBox = document.createElement("div")
-newBox.textContent = "How are you doing Today"
+// const newBox = document.createElement("div")
+// newBox.textContent = "How are you doing Today"
 
-document.body.appendChild(newBox)
+// document.body.appendChild(newBox)
+
+// const box = document.getElementById("box")
+
+// const newH1 = document.createElement("h1")
+
+// newH1.textContent = "Dolly"
+// newH1.style.color = "white"
+
+// newBox.appendChild(newH1)
