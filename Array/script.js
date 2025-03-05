@@ -24,8 +24,8 @@ console.log(typeof replaceEl);
 cohorts[8] = "Peezle"
 console.log(cohorts);
 
-cohorts.forEach((names) => {
-    console.log(names.toUpperCase())
+cohorts.forEach((name) => {
+    console.log(name.toUpperCase())
 })
 
 
@@ -39,18 +39,44 @@ console.log(students)
 
 // To add a new element to the end of an array
 
-const pushed = students.push("Bisola", "Lateefah")
+const pushed = students.push("Bisola", "Lateefah");
 console.log(pushed) // to print new array length
+
+let fruits = ["apple", "orange"];
+fruits.push("mango");
+console.log(fruits);
+
+fruits.push("Banana", "Grape", "nuts")
+console.log(fruits)
+
+//Pushing different type of data 
+
+fruits.push({name: "John", age: 24})
+console.log(fruits)
+
+// pushing an array
+let colord = ["yellow", "red"]
+fruits.push(colord)
+
+console.log(fruits)
+
 
 // POP Method
 // To remaove the last element in an array
 
-const number = [1, 2, 5, 4, 6, 2, 5, 8, 1]
-console.log(number)
+const number = [1, 2, 5, 4, 6, 2, 5, 8, 1];
+console.log(number);
 
 const popped = number.pop() // To save the removed element in a varaible
 console.log(popped); // To view the removed element
 console.log(number)
+
+//using pop with mixed data type
+
+let mixedArray = [1, 'string', true, { name: 'John' }];
+let removedItem = mixedArray.pop();
+console.log(removedItem);
+console.log(mixedArray)
 
 // SHIFT Method
 // To remove the first element of an array
@@ -74,6 +100,14 @@ const unshi = colors.unshift("Tomato", "Black")
 console.log(unshi)
 console.log(colors)
 
+// using unshift with loop
+
+let numberd = [3, 4, 5];
+for(let i = 1; i <= 2; i++){
+    numberd.unshift(1);
+}
+console.log(numberd)
+
 // SPLICE Method
 
 // It allow us to add element or Value into array, it usually take 3 parameter, the first detremine where th new element are placed, the second parameter determine the numbers of element you wan to delete after you placed new element and the third detremine the element you wish to add.
@@ -90,6 +124,12 @@ console.log(wears)
 
 wears.splice(2)
 console.log(wears)
+
+let animals = ['dog', 'cat', 'rabbit'];
+let replacedAnimal = animals.splice(1, 1, 'hamster');
+console.log(animals);  
+console.log(replacedAnimal);
+
 
 // SLICE method
 
@@ -147,7 +187,7 @@ console.log(male)
 const num = [1, 2, 3, 4, 9, 8, 7, 12, 11, 1, 2]
 console.log(num)
 
-const index1 = num.indexOf(2)
+const index1 = num.indexOf(9)
 const index2 = num.indexOf(5)
 console.log(index1)
 console.log(index2)
@@ -156,7 +196,7 @@ console.log(index2)
 
 // It will start serching from the end to the beginning and search for the specified element
 
-const lastIndexOf = num.lastIndexOf(4, num.length)
+const lastIndexOf = num.lastIndexOf(2, num.length)
 console.log(lastIndexOf);
 
 // forEach
@@ -187,7 +227,8 @@ names.forEach((values, i, arr) => {
 let totalVal = 0;
 const trans = [42, 45, 26, 4, 13, 16]
 trans.forEach((trans) =>{
-    console.log(totalVal, (totalVal += trans), trans)
+    // console.log(totalVal, (totalVal += trans), trans)
+    console.log(totalVal = totalVal + trans)
 })
 console.log(totalVal)
 
@@ -198,6 +239,7 @@ names.forEach((names) => console.log (`congratulation ${names}, You will be repr
 
 //It is similar to forEach, it also accept up to 3 argument, it allocate memory in all data store and return values
 
+// it create a new array and apply function to each element without modifying the original array.
 const investory = [
     {name: "Rice", price: 50000},
     {name: "Beans", price: 500},
@@ -210,9 +252,105 @@ const prices = investory.map((value) =>{
     return value.price
 })
 
-console.log(prices)
+console.log(prices);
 
 
 const commodites = investory.map((value) => value.name)
-console.log(commodites)
+console.log(commodites);
 
+
+const arr = [1, 2, 3, 4, 5, 6];
+const muiltiplyValue = arr.map((el) => el * 2)
+
+console.log(muiltiplyValue);
+
+const words = ["hello", "world", "javascript"];
+console.log(words.map((word) => word.toUpperCase()));
+
+const priceInUSD = [200, 120, 350, 90]
+const xchangeRate = 1490;
+
+console.log(priceInUSD.map((usd) => usd *xchangeRate))
+
+const users = [
+    {name: "lateefa", age: 300},
+    {name: "Abdul", age: 350},
+    {name: "Muiz", age: 1450},
+    {name: "Kabir", age: 1950}
+]
+
+const user = users.map((value) => {
+    return value.name
+})
+ console.log(user)
+
+
+ const products = [
+    {name: "Laptod", price: 300},
+    {name: "Desktop", price: 350},
+    {name: "Mouse", price: 1450},
+    {name: "Keyboard", price: 1950}
+]
+
+const productWithId = products.map((product, index) => ({
+    id: index + 1,
+    ...product,
+}))
+
+console.log(productWithId)
+// console.log(products)
+
+const idUser = productWithId.map((val) => {
+    return val.id
+})
+
+console.log(idUser)
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+const numb = numbers.map((number) => {
+        if(number < 6 ) {
+            return number
+        }
+})
+
+ console.log(numb)
+
+
+ //Filter Method
+
+ const evenNumber = numbers.filter((i) =>
+i % 2 === 0)
+ console.log(evenNumber)
+
+
+const below = productWithId.filter((product) => product.price <= 1000)
+
+console.log(below)
+
+const character = productWithId.filter((nam) => nam.name.length < 7)
+
+console.log(character)
+
+let newArr = [100, "pelumi", false, {}, null, undefined]
+
+const filterStringArr = newArr.filter((data) => typeof data === "string")
+
+console.log(filterStringArr)
+
+// trans.forEach((trans) =>{
+//     // console.log(totalVal, (totalVal += trans), trans)
+//     console.log(totalVal = totalVal + trans)
+// })
+// console.log(totalVal)
+
+let priceNum = 0;
+
+const numbb = productWithId.map((withId) => withId.price);
+
+for (let i = 0; i < numbb.length; i++) {
+    priceNum += numbb[i];
+}
+
+console.log(priceNum);
