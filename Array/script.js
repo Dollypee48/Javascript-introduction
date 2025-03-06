@@ -339,11 +339,6 @@ const filterStringArr = newArr.filter((data) => typeof data === "string")
 
 console.log(filterStringArr)
 
-// trans.forEach((trans) =>{
-//     // console.log(totalVal, (totalVal += trans), trans)
-//     console.log(totalVal = totalVal + trans)
-// })
-// console.log(totalVal)
 
 let priceNum = 0;
 
@@ -354,3 +349,109 @@ for (let i = 0; i < numbb.length; i++) {
 }
 
 console.log(priceNum);
+
+
+const humans = ["Dolu", "Habeeb", "feranmi", "abdul", ]
+
+const upperCaseName = humans.filter((human) => {
+    if (human.charAt(0) === human.charAt(0).toUpperCase() ) return human
+})
+console.log(upperCaseName)
+
+const pluralCaseName = humans.filter((human) => {
+    if (human.charAt(0) === human.charAt(0).toUpperCase() ) return human
+}).map((element) => element + "s") 
+
+pluralCaseName.push("Dolapo")
+
+console.log(pluralCaseName)
+console.log({pluralCaseName})
+
+
+// forEach vs map
+
+const userArr = [{name: "Habeeb", age: 15,}, {name: "Tolu", age: 10}]
+
+userArr.forEach((arr) => arr.age += 5)
+
+console.log({userArr})
+
+const newUserArr = userArr.map((nam, index) => ({...nam, age: nam.age + 5, height: nam.age + 10, 
+    id: index + 1
+}))
+
+console.log({newUserArr});
+
+
+// Reduce Method
+
+
+// syntax: array.reduce((accumulator, currentValue, currentIndex, array), initialValue)
+
+// 1. Sum of Array element
+// 2. flatten an array
+// 3. Occurence of an element /item in an array
+// 4. find the maximum value
+// 5. Grouping data by a property
+
+
+// 1. Sum of Array element
+
+const myNums = [1, 2, 3, 4, 5];
+
+const sum = myNums.reduce((accu, curVal) => (accu + curVal), 0);
+
+console.log({sum});
+
+// 2. flatten an array
+
+const nestedArray = [[1, 2], [3, 4], [4, 6]];
+
+const flattenedArray = nestedArray.reduce((acc, curval) => (acc.concat(curval)), [])
+
+console.log({flattenedArray})
+
+const flattenedArray2 = nestedArray.reduce((acc, curr) => (acc.concat(curr)), []).reduce((acc,curr)=> {
+  if(!acc.includes(curr)){
+  acc.push(curr)
+  }
+  return acc;
+}, [])
+
+console.log(flattenedArray2)
+
+// to remove duplicate from the result, u can use reduce, filter and also for each method
+
+const flatFilter = flattenedArray.filter((e, index, array) => array.indexOf(e) === index) 
+console.log(flatFilter)
+
+
+// 3. Occurence of an element/item in an array
+
+const myFruits = ["Grape", "Banana", "Banana", "Orange"]
+
+const count = myFruits.reduce((acc, curr) =>{
+    acc[curr] = (acc[curr] || 0) + 1;
+
+    return acc
+}, {})
+
+console.log({count});
+
+//4. find the maximum value
+
+const maxExample = [10, 30, 3, 100, 4];
+
+const max = maxExample.reduce((acc, curr) => curr > acc ? curr : acc, maxExample[0]);
+
+console.log({max})
+
+
+
+
+
+
+
+
+
+
