@@ -8,6 +8,20 @@ if ("condition"){
     // code to execute if condition is met
 }
 
+// nested if statement
+
+// let d = 20;
+
+// if (d === 20){
+//     if (d < 15){
+//         console.log("d is greater than 15");
+//         if(d < 19)
+//             console.log("d is greater than 19")
+//         else
+//         console.log ("d is equal to 20")
+//     }
+// }
+
 
 
 let age = 30;
@@ -220,6 +234,7 @@ switch (dayNumber){
     let table = 7;
     for (let i = 1; i <= 10; i++) {
         console.log(`${table} * ${i} = ${table * i}`);
+    
     }
 
 
@@ -276,13 +291,13 @@ switch (dayNumber){
      let myDetails = { school: "Unilorin", faculty: "Agriculture"}
 
      for(key in myDetails) {
-        console.log(myDetails[key])
+        console.log(key + ":", myDetails[key])
      }
 
      let colors = ["yellow", "Red", "Blue", "Pink"]
 
      for(element of colors) {
-        console.log( "color:" + element);
+        console.log( element);
      }
         
      
@@ -307,6 +322,33 @@ while (y < 10){
     }
     console.log(y);
 }
+
+// examples
+let w = 3;
+
+while(w <= 7){
+  console.log(w)
+  w++
+}
+
+// ===========================
+let cookies = 3;
+
+while (cookies > 0) {
+    console.log(cookies + " cookies left.");
+    cookies--;
+}
+
+// ===================_______
+
+let fruitss = ["Apples", "Mangoes", "Oranges", "Watermelon"];
+let z = 0;
+while (z < fruitss.length){
+  console.log(fruitss[z]);
+  z++;
+}
+
+// ==============
 
 let col = ["yellow", "Red", "Blue", "Pink"]
 let j = 0;

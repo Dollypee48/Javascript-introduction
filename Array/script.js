@@ -41,6 +41,7 @@ console.log(students)
 
 const pushed = students.push("Bisola", "Lateefah");
 console.log(pushed) // to print new array length
+console.log(students)
 
 let fruits = ["apple", "orange"];
 fruits.push("mango");
@@ -62,7 +63,7 @@ console.log(fruits)
 
 
 // POP Method
-// To remaove the last element in an array
+// To remove the last element in an array
 
 const number = [1, 2, 5, 4, 6, 2, 5, 8, 1];
 console.log(number);
@@ -110,7 +111,7 @@ console.log(numberd)
 
 // SPLICE Method
 
-// It allow us to add element or Value into array, it usually take 3 parameter, the first detremine where th new element are placed, the second parameter determine the numbers of element you wan to delete after you placed new element and the third detremine the element you wish to add.
+// It allow us to add element or Value into array, it usually take 3 parameter, the first detremine where the new element are placed, the second parameter determine the numbers of element you wan to delete after you placed new element and the third detremine the element you wish to add.
 
 const foods = ["Rice", "Beans", "Amala", "Semo", "Egg", "Iyan", "Eba"]
 
@@ -220,19 +221,31 @@ names.forEach((values, i, arr) => {
     console.log(arr)
 })
 
-// call back function is used to passed funtion into another function as an argument which is then invoked inside the outer function to complete some kind of routing action
+// call back function is used to passed function into another function as an argument which is then invoked inside the outer function to complete some kind of routing action
 
 
 
 let totalVal = 0;
 const trans = [42, 45, 26, 4, 13, 16]
-trans.forEach((trans) =>{
+trans.forEach((tran) =>{
     // console.log(totalVal, (totalVal += trans), trans)
-    console.log(totalVal = totalVal + trans)
+    console.log(totalVal = totalVal += tran)
 })
-console.log(totalVal)
+
 
 names.forEach((names) => console.log (`congratulation ${names}, You will be representing the team i the UK next month`)) 
+
+names.forEach((name) => {
+    console.log(name + "s")
+}) 
+
+const frui = ['apple', 'banana', 'cherry'];
+
+frui.forEach((foot, index) => {
+    console.log(index + ": " + foot)
+})
+
+
 
 
 //Map Method 
@@ -248,6 +261,7 @@ const investory = [
     {name: "Yam", price: 5000}
 ]
 
+
 const prices = investory.map((value) =>{
     return value.price
 })
@@ -260,17 +274,36 @@ console.log(commodites);
 
 
 const arr = [1, 2, 3, 4, 5, 6];
-const muiltiplyValue = arr.map((el) => el * 2)
+const muiltiplyValue = arr.map((el) => {
+    return el * 2
+})
 
 console.log(muiltiplyValue);
 
+//using foreach
+
+arr.forEach((ello) =>{
+    console.log(ello * 2) ;
+})
+
+
 const words = ["hello", "world", "javascript"];
 console.log(words.map((word) => word.toUpperCase()));
+
+const war = words.map((hello) =>{
+    return hello.toUpperCase()
+})
+console.log(war)
 
 const priceInUSD = [200, 120, 350, 90]
 const xchangeRate = 1490;
 
 console.log(priceInUSD.map((usd) => usd *xchangeRate))
+
+const weel = priceInUSD.map((us) =>{
+    return us * xchangeRate
+})
+console.log(weel)
 
 const users = [
     {name: "lateefa", age: 300},
@@ -310,15 +343,21 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 
 const numb = numbers.map((number) => {
-        if(number < 6 ) {
-            return number
-        }
+    if( number < 6){
+        return number
+    }
 })
 
  console.log(numb)
 
+ 
 
  //Filter Method
+
+ const nummbb = numbers.filter((numm) =>{
+    return numm < 6
+ })
+    console.log(nummbb)
 
  const evenNumber = numbers.filter((i) =>
 i % 2 === 0)
@@ -328,6 +367,11 @@ i % 2 === 0)
 const below = productWithId.filter((product) => product.price <= 1000)
 
 console.log(below)
+
+const low = productWithId.filter((how) => {
+    return how.price <= 1000
+})
+console.log(low)
 
 const character = productWithId.filter((nam) => nam.name.length < 7)
 
@@ -446,10 +490,55 @@ const max = maxExample.reduce((acc, curr) => curr > acc ? curr : acc, maxExample
 
 console.log({max})
 
+const transactions = [
+    { type: "credit", amount: 500 },
+    { type: "debit", amount: 200 },
+    { type: "credit", amount: 300 },
+    { type: "debit", amount: 100 },
+    { type: "credit", amount: 150 }
+  ];
 
+  const totalAmount = transactions.reduce((accumu, curval) => {
+    if (curval.type === "credit"){
+        return accumu + curval.amount;
+    }else if (curval.type === "debit") {
+        return accumu - curval.amount;
+    }
+    return accumu;
+  }, 0)
 
+  console.log(totalAmount);
 
+  const productsInventory = [
+    { name: "Laptop", price: 1000, quantity: 5 },
+    { name: "Phone", price: 500, quantity: 10 },
+    { name: "Headphones", price: 100, quantity: 25 },
+    { name: "Mouse", price: 25, quantity: 50 },
+    { name: "Keyboard", price: 75, quantity: 20 }
+  ];
 
+const totalInventory = productsInventory.reduce((acc, product) => {
+    return acc + (product.price * product.quantity);
+}, 0)
+
+console.log(totalInventory);
+
+const studentScore = [
+    { name: "Alice", scores: [80, 90, 85] },
+    { name: "Bob", scores: [70, 75, 80] },
+    { name: "Charlie", scores: [90, 92, 95] },
+    { name: "David", scores: [60, 65, 70] },
+    { name: "Eva", scores: [88, 85, 84] }
+  ];
+
+  highestAverageScore = studentScore.reduce((accumu, student) => {
+
+const averageScore = student.scores.reduce((sum, score) => sum + score, 0)/ student.scores.length;
+return averageScore > accumu ? averageScore : accumu;
+  }, 0);
+
+  console.log(highestAverageScore);
+  
 
 
 

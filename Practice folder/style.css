@@ -1,0 +1,53 @@
+body{
+    background-image: url(https://shorturl.at/KEzhT);
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#login{
+    width: 220px;
+    border: 2px solid;
+    background-image: url(https://shorturl.at/KEzhT);
+    background-size: cover;
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgb(241, 239, 231) ;
+  
+}
+h1{
+    color: white;
+    
+}
+
+.word{
+    width: 200px;
+    border-radius: 15px;
+    height: 25px;
+}
+
+.member{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 200px;
+    height: 25px;
+
+
+}

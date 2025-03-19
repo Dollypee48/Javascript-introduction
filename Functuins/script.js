@@ -12,9 +12,16 @@
 
 // // Function Expression
 
+// this is when a function is define as part of an expression. it can be assign to a variable
+
 // const myWorld = function(){
 //     return "Hello world"
 // }
+
+const multiply = function(name){
+    return `"hello,  ${name}`
+}
+console.log(multiply("dammy"))
 
 // // Arrow Function
 
@@ -45,6 +52,11 @@ function jamb(age) {
 
 }
 console.log(jamb(25));
+
+function greet(name){
+    return `"Hello, ${name}!`
+}
+console.log(greet("Habeeb"))
 
 
 // Hositing is the ability to use a variable before it been declare

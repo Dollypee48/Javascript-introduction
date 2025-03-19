@@ -79,6 +79,8 @@ container.innerHTML = ` <h1> I do read </h1>
 
 container.style.backgroundColor = "black"
 container.style.color = "white"
+container.style.width = "200px"
+
 
 
 // adding and removing classes
