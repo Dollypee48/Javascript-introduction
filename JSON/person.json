@@ -1,0 +1,16 @@
+
+    
+        {
+            "name": "Dolapo",
+            "age": 23,
+           " hobbies": ["Football", "Cooking"],
+            "address": {
+                "street": "Ojuelegba",
+                "number": 2,
+                "city": "Osogbo"
+            }
+        }
+   
+ 
+
+

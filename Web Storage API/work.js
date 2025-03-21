@@ -1,3 +1,11 @@
+//Web Storage API
+//The Web Storage API provides mechanisms by which browsers can store key/value pairs,
+
+// The Web Storage API offers two main mechanisms to store data:
+
+// Local Storage
+// Session Storage
+
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -26,9 +34,17 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
-// Web Srorage API
 
-// we have setItem() and getItem()
+// Local Storage
+
+// 1. Local Storage
+// Local Storage is used to store data that is persistent across sessions. The data stored in local storage does not expire, and it remains available even after the browser is closed and reopened.
+
+
+// 2. Session Storage is similar to Local Storage but with a key difference: the data only persists for the duration of the page session. The data is deleted when the page session ends, which typically happens when the browser or tab is closed.
+
+// we have setItem() and getItem(), removeItem(), clear()
+
 
 localStorage.setItem("name","Dolapo")
 
